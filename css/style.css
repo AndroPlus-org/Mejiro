@@ -1,0 +1,13 @@
+body{
+	font-family: 'Mejiro', 'Roboto', 'M PLUS 1p', 'Noto Sans Japanese', "Hiragino Sans", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
+}
+.mejiro{
+	font-size: 4rem;
+}
+.container{
+	padding: 3rem 1rem;
+}
+#sample{
+	width: 90%;
+	max-width: 360px;
+}

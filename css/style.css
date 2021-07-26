@@ -11,3 +11,7 @@ body{
 	width: 90%;
 	max-width: 360px;
 }
+ol, ul {
+    display: inline-block;
+	text-align: left;
+}

@@ -15,3 +15,6 @@ ol, ul {
     display: inline-block;
 	text-align: left;
 }
+.card{
+	margin: 0.6rem 0;
+}

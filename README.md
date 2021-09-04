@@ -9,12 +9,13 @@ Generation script is available on [AndroPlus-org/Scripts](https://github.com/And
 | Mejiro | M+ 1p | Roboto
 |:---:|:---:|:---:|
 | **Regular** | Regular | Regular |
+| **Thin** | Thin | Thin |
 | **Light** | Light | Light |
 | **Semibold** | Medium | Medium |
 | **Bold** | Bold | Bold |
 | **Extrabold** | Heavy | Black |
 
-Mejiro-20210630 uses **M+ OUTLINE FONTS TESTFLIGHT 063** (2017.10.25) and **Roboto 2.137**.
+Mejiro-20210904 uses **M+ OUTLINE FONTS TESTFLIGHT 063** (2017.10.25) and **Roboto 2.137**.
 
 ## License
 

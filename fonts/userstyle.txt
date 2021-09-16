@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'WebMejiro';
+	src: url('https://androplus.org/fonts/Mejiro-Regular.woff2') format('woff2'),
+	url('https://androplus.org/fonts/Mejiro-Regular.woff') format('woff'),
+	url('https://androplus.org/fonts/Mejiro-Regular.ttf') format('truetype');
+}
+
+div,p,h1,h2,h3,span{
+	font-family: dashicons, FontAwesome, WebMejiro, sans-serif ! important;
+}

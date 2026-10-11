@@ -1,0 +1,40 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "リリースタグ（例: Mejiro-20261011）"
+        required: true
+      notes:
+        description: "リリースノート（変更点）"
+        required: true
+        default: "* バリアブルフォント（Mejiro-VariableFont_wght.ttf）を追加"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Mejiro.zip
+        run: |
+          mkdir -p dist/Mejiro
+          cp Mejiro-*.ttf LICENSE LICENSE_E.mplus LICENSE_J.mplus OFL.txt README.md README_ja.md README_E.mplus README_J.mplus dist/Mejiro/
+          (cd dist && zip -r -9 Mejiro.zip Mejiro)
+          unzip -l dist/Mejiro.zip
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+          NOTES: ${{ inputs.notes }}
+        run: |
+          printf '%s\n\n※こちらは Magisk モジュールではありません。[Magisk モジュールはこちら](https://github.com/AndroPlus-org/magisk-module-mejiro-font/releases)\n' "$NOTES" > notes.md
+          gh release create "$TAG" dist/Mejiro.zip \
+            --title "$TAG" \
+            --notes-file notes.md \
+            --target "$GITHUB_SHA"
